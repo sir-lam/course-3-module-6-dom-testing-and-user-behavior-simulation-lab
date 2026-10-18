@@ -10,5 +10,14 @@ export default [
   {
     languageOptions: { globals: customGlobals },
   },
+  {
+    files: ["test/**/*.js"],
+    languageOptions: {
+      globals: {
+        ...globals.jest,
+        ...globals.node,
+      },
+    },
+  },
   pluginJs.configs.recommended,
 ];
